@@ -22,7 +22,7 @@ public class LoginDataSource {
             return new Result.Error(new IOException("Error logging in", e));
         }
     }
-
+//vai sa o boga
     public void logout() {
         // TODO: revoke authentication
     }
