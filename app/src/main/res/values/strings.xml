@@ -12,4 +12,8 @@
     <string name="senha">Senha:</string>
     <string name="login">Login:</string>
     <string name="descricao">Descrição generica para todas as imagens</string>
+    <string name="nome_funcionario">Nome do Funcionario:</string>
+    <string name="nome_usuario">Nome de Usuario:</string>
+    <string name="email">Email:</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>
