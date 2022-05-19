@@ -1,5 +1,6 @@
 package com.example.ranchosojos.ui.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,12 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
+import com.example.ranchosojos.R;
 import com.example.ranchosojos.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
 
 
     private ActivityLoginBinding binding;
+    private Button btLogin;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,23 +25,32 @@ public class LoginActivity extends AppCompatActivity {
 
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        btLogin = findViewById(R.id.buttonlogin);
 
-
-
-        final EditText usernameEditText = binding.username;
-        final EditText passwordEditText = binding.password;
-        final Button loginButton = binding.login;
-        final ProgressBar loadingProgressBar = binding.loading;
-
-
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                loadingProgressBar.setVisibility(View.VISIBLE);
-
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Cadastro.class);
+                startActivity(i);
             }
         });
+
+
+
+//        final EditText usernameEditText = binding.username;
+//        final EditText passwordEditText = binding.password;
+//        final Button loginButton = binding.buttonlogin;
+//        final ProgressBar loadingProgressBar = binding.loading;
+//
+//
+//
+//        loginButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                loadingProgressBar.setVisibility(View.VISIBLE);
+//
+//            }
+//        });
     }
 
 }
