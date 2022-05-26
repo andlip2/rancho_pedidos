@@ -11,7 +11,7 @@
         android:theme="@style/Theme.RanchoSãoJosé">
         android:name="androidx.multidex.MultiDexApplication" >
         <activity
-            android:name=".ui.view.Cadastro"
+            android:name=".ui.view.Activity.Cadastro"
             android:exported="false" />
         <activity
             android:name=".ui.view.LoginActivity"
