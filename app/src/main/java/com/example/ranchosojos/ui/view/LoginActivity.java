@@ -42,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
         autenticacao = ConfiguracaoFirebase.getFirebaseAuth();
 
 
-
         btlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,6 +96,13 @@ public class LoginActivity extends AppCompatActivity {
 //
 //            }
 //        });
+        if (autenticacao.getCurrentUser() == null){
+
+//            onDestroy();
+        }else {
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(i);
+        }
     }
 
 }
