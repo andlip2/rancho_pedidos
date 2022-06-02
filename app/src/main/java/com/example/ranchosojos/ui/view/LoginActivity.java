@@ -50,9 +50,8 @@ public class LoginActivity extends AppCompatActivity {
                 if (emailRecuperado.equals("admLigia") && senhaRecuperado.equals("ligiaAdm")){
                     carregar.setVisibility(View.VISIBLE);
                     Intent i = new Intent(getApplicationContext(), Cadastro.class);
-                startActivity(i);}else {
-                    Toast.makeText(getApplicationContext(), "Erro desconhecido", Toast.LENGTH_LONG).show();
-                }
+                startActivity(i);}
+                else {
                  if (!emailRecuperado.isEmpty()){
                     if (!senhaRecuperado.isEmpty()){
 
@@ -62,30 +61,26 @@ public class LoginActivity extends AppCompatActivity {
                                     public void onComplete(@NonNull Task<AuthResult> task) {
                                         if (!emailRecuperado.isEmpty()){
                                             if (!senhaRecuperado.isEmpty()){
-
                                                 if (task.isSuccessful()){
-
-                                                    Intent i = new Intent(getApplicationContext(), Cadastro.class);
+                                                    toast("Login efetuado com sucesso");
+                                                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
                                                     startActivity(i);
-
                                                 }
-
                                             }else{
-                                                Toast.makeText(getApplicationContext(), "Preencha a senha", Toast.LENGTH_LONG).show();
+                                                toast("Preencha a senha");
                                             }
                                         }else {
-                                            Toast.makeText(getApplicationContext(), "Preencha o Email", Toast.LENGTH_LONG).show();
+                                            toast("Preencha o Email");
                                         }
                                     }
                                 });
-
                     }else{
-                        Toast.makeText(getApplicationContext(), "Preencha a senha", Toast.LENGTH_LONG).show();
+                        toast("Preencha a senha");
                     }
                 }else {
-                     Toast.makeText(getApplicationContext(), "Preencha o Email", Toast.LENGTH_LONG).show();
+                     toast("Preencha o Email");
                  }
-            }
+            }}
         });
 
 
@@ -103,6 +98,10 @@ public class LoginActivity extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(i);
         }
+    }
+
+    private void toast (String mensagem) {
+        Toast.makeText(getApplicationContext(), mensagem, Toast.LENGTH_SHORT).show();
     }
 
 }

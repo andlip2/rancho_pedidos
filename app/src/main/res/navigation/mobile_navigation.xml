@@ -3,23 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_perfil">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.ranchosojos.ui.view.Activity.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/nav_perfil"
+        android:name="com.example.ranchosojos.ui.view.Activity.ui.perfil.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/fragment_perfil" />
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.ranchosojos.ui.view.Activity.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_inicio"
+        android:name="com.example.ranchosojos.ui.view.Activity.inicio.InicioFragment"
+        android:label="@string/menu_inicio"
+        tools:layout="@layout/fragment_inicio" />
 
-    <fragment
-        android:id="@+id/nav_sair"
-        android:name="com.example.ranchosojos.ui.view.Activity.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_sair"
-        tools:layout="@layout/fragment_slideshow" />
 </navigation>

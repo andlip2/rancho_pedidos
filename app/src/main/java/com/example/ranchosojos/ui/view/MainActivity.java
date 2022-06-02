@@ -1,9 +1,13 @@
 package com.example.ranchosojos.ui.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -45,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
         // Configurações do menu deslizante
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_sair)
+                R.id.nav_perfil, R.id.nav_inicio)
                 .setOpenableLayout(drawer)
                 .build();
 
@@ -55,13 +59,31 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_sair:
+                autenticacao.signOut();
+                Toast.makeText(getApplicationContext(),"Deu certo",Toast.LENGTH_LONG).show();
+                onDestroy();
+                Intent i = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(i);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
     }
 
     @Override
