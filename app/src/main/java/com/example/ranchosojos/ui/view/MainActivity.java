@@ -17,6 +17,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.ranchosojos.R;
 import com.example.ranchosojos.databinding.ActivityMainBinding;
+import com.example.ranchosojos.ui.view.Activity.CadastroPedidosActivity;
 import com.example.ranchosojos.ui.view.helper.ConfiguracaoFirebase;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -38,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
         autenticacao = ConfiguracaoFirebase.getFirebaseAuth();
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
+        binding.appBarMain.fabCriarPedido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(MainActivity.this, CadastroPedidosActivity.class);
+                startActivity(i);
             }
         });
         DrawerLayout drawer = binding.drawerLayout;

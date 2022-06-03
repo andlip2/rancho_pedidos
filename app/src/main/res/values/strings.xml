@@ -26,4 +26,14 @@
 
     <string name="menu_perfil">Perfil</string>
     <string name="menu_inicio">Inicio</string>
+    <string name="mesa">Mesa:</string>
+    <string name="comida">Comida:</string>
+    <string name="quantidade">Quantidade</string>
+    <string-array name="mesas">
+        <item>mesa 01</item>
+        <item>mesa 02</item>
+        <item>mesa 03</item>
+        <item>mesa 04</item>
+        <item>mesa 05</item>
+    </string-array>
 </resources>
