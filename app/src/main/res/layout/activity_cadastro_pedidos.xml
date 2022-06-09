@@ -6,125 +6,403 @@
     android:layout_height="match_parent"
     tools:context=".ui.view.Activity.CadastroPedidosActivity">
 
-    <Spinner
-        android:id="@+id/spinnerMesas"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="@string/mesa"
-        android:minHeight="48dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="parent" >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="95dp"
-        android:text="@string/mesa"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/comida"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerMesas" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout5"
-        style="@style/Widget.Design.TextInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDiminuir"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="hint"
-            tools:ignore="TouchTargetSizeCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginEnd="16dp"
-        android:text="0"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/buttonAdicionar"
-        app:layout_constraintStart_toEndOf="@+id/buttonDiminuir"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerMesas" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:text="@string/mesa"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonAdicionar"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="0dp"
-        android:contentDescription="@string/action_sign_in"
-        android:includeFontPadding="false"
-        app:backgroundTint="#00673AB7"
-        app:icon="@drawable/ic_adicionar_preto_24"
-        app:iconGravity="textEnd"
-        app:iconPadding="0dp"
-        app:iconSize="28dp"
-        app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.412"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:layout_marginBaseline="0dp" />
+            <Spinner
+                android:id="@+id/spinnerMesas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/mesa"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <Button
-        android:id="@+id/buttonDiminuir"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="0dp"
-        android:layout_marginStart="24dp"
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/comida"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
-        android:layout_marginEnd="33dp"
-        android:contentDescription="@string/action_sign_in"
-        app:backgroundTint="#00673AB7"
-        app:icon="@drawable/ic_baseline_remove_24"
-        app:iconGravity="textEnd"
-        app:iconPadding="0dp"
-        app:iconSize="28dp"
-        app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintStart_toEndOf="@+id/textInputLayout5"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:layout_marginBaseline="0dp" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="0"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarRancho"
+                app:layout_constraintStart_toEndOf="@+id/buttonDiminuirRancho"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/quantidade"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="@+id/buttonDiminuir" />
+            <Button
+                android:id="@+id/buttonAdicionarRancho"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="0dp"
+                android:contentDescription="@string/action_sign_in"
+                android:includeFontPadding="false"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_adicionar_preto_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.412"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@+id/textView4"
+                app:layout_marginBaseline="0dp" />
+
+            <Button
+                android:id="@+id/buttonDiminuirRancho"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="0dp"
+
+                android:contentDescription="@string/action_sign_in"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_baseline_remove_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintEnd_toStartOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.523"
+                app:layout_marginBaseline="0dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/quantidade"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/burger_rancho"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/burger_jose"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="0"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarJose"
+                app:layout_constraintStart_toEndOf="@+id/buttonDiminuirJose"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <Button
+                android:id="@+id/buttonAdicionarJose"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="0dp"
+                android:contentDescription="@string/action_sign_in"
+                android:includeFontPadding="false"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_adicionar_preto_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.412"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toTopOf="@+id/textView8"
+                app:layout_marginBaseline="0dp" />
+
+            <Button
+                android:id="@+id/buttonDiminuirJose"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="0dp"
+                android:contentDescription="@string/action_sign_in"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_baseline_remove_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintEnd_toStartOf="@+id/textView8"
+                app:layout_constraintHorizontal_bias="0.326"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.523"
+                app:layout_marginBaseline="0dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="0"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarSantana"
+                app:layout_constraintHorizontal_bias="0.809"
+                app:layout_constraintStart_toEndOf="@+id/buttonDiminuirSantana"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <Button
+                android:id="@+id/buttonAdicionarSantana"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="0dp"
+                android:contentDescription="@string/action_sign_in"
+                android:includeFontPadding="false"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_adicionar_preto_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.412"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="@+id/textView10"
+                app:layout_marginBaseline="0dp" />
+
+            <Button
+                android:id="@+id/buttonDiminuirSantana"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="0dp"
+                android:contentDescription="@string/action_sign_in"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_baseline_remove_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                app:layout_constraintEnd_toStartOf="@+id/textView10"
+                app:layout_constraintHorizontal_bias="0.326"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/textView10"
+                app:layout_marginBaseline="0dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/burger_santada"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="0"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarMirim"
+                app:layout_constraintHorizontal_bias="0.809"
+                app:layout_constraintStart_toEndOf="@+id/buttonDiminuirMirim"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <Button
+                android:id="@+id/buttonAdicionarMirim"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="0dp"
+                android:contentDescription="@string/action_sign_in"
+                android:includeFontPadding="false"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_adicionar_preto_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.412"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="@+id/textView12"
+                app:layout_marginBaseline="0dp" />
+
+            <Button
+                android:id="@+id/buttonDiminuirMirim"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="0dp"
+                android:contentDescription="@string/action_sign_in"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_baseline_remove_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                app:layout_constraintEnd_toStartOf="@+id/textView12"
+                app:layout_constraintHorizontal_bias="0.326"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/textView12"
+                app:layout_marginBaseline="0dp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/burger_mirim"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="0"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarJardim"
+                app:layout_constraintHorizontal_bias="0.809"
+                app:layout_constraintStart_toEndOf="@+id/buttonDiminuirJardim"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <Button
+                android:id="@+id/buttonAdicionarJardim"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="0dp"
+                android:contentDescription="@string/action_sign_in"
+                android:includeFontPadding="false"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_adicionar_preto_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.412"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="@+id/textView14"
+                app:layout_marginBaseline="0dp" />
+
+            <Button
+                android:id="@+id/buttonDiminuirJardim"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/action_sign_in"
+                app:backgroundTint="#00673AB7"
+                app:icon="@drawable/ic_baseline_remove_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:iconTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintEnd_toStartOf="@+id/textView14"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/textView14"
+                app:layout_marginBaseline="0dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/burger_jardim"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.49" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
