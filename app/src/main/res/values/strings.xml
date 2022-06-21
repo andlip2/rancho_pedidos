@@ -27,7 +27,7 @@
     <string name="menu_perfil">Perfil</string>
     <string name="menu_inicio">Inicio</string>
     <string name="mesa">Mesa:</string>
-    <string name="comida">Hamburgers:</string>
+    <string name="comida">HAMBERGERS:</string>
     <string name="quantidade">Quantidade</string>
     <string name="burger_rancho">Burger Rancho</string>
     <string name="burger_jose">Burger Jose</string>
@@ -35,11 +35,13 @@
     <string name="burger_mirim">Burger Mirim</string>
     <string name="burger_jardim">Burger Jardim</string>
     <string name="burger_faustino">Burger Faustino</string>
+    <string name="petiscos">PETISCOS:</string>
     <string-array name="mesas">
-        <item>mesa 01</item>
-        <item>mesa 02</item>
-        <item>mesa 03</item>
-        <item>mesa 04</item>
-        <item>mesa 05</item>
+        <item> </item>
+        <item>Mesa 01</item>
+        <item>Mesa 02</item>
+        <item>Mesa 03</item>
+        <item>Mesa 04</item>
+        <item>Mesa 05</item>
     </string-array>
 </resources>

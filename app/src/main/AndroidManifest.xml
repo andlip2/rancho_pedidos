@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RanchoSãoJosé">
         <activity
-            android:name=".CadastroPedidosActivity"
+            android:name=".AddPedidosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.Activity.CadastroPedidosActivity"
             android:exported="false" />
         <activity
             android:name=".ui.view.MainActivity"

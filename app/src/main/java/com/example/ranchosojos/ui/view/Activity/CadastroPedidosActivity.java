@@ -7,15 +7,19 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.example.ranchosojos.R;
+import com.example.ranchosojos.databinding.ActivityCadastroPedidosBinding;
+import com.example.ranchosojos.databinding.ActivityLoginBinding;
 
 public class CadastroPedidosActivity extends AppCompatActivity {
 
     private Spinner spMesas;
+private com.example.ranchosojos.databinding.ActivityCadastroPedidosBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_pedidos);
+        binding = ActivityCadastroPedidosBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         String [] mesas = getResources().getStringArray(R.array.mesas);
 
