@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ranchosojos">
+    package="com.example.ranchosojos" >
 
     <application
         android:allowBackup="true"
@@ -8,12 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RanchoSãoJosé">
+        android:theme="@style/Theme.RanchoSãoJosé" >
         <activity
-            android:name=".AddPedidosActivity"
+            android:name=".ui.view.Activity.pedidos.CadastroPetiscosActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.view.Activity.CadastroPedidosActivity"
+            android:name=".ui.view.Activity.pedidos.AddPedidosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.Activity.pedidos.CadastroHamburgerActivity"
             android:exported="false" />
         <activity
             android:name=".ui.view.MainActivity"
@@ -26,7 +29,7 @@
         <activity
             android:name=".ui.view.LoginActivity"
             android:exported="true"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

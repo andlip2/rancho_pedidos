@@ -17,7 +17,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.ranchosojos.R;
 import com.example.ranchosojos.databinding.ActivityMainBinding;
-import com.example.ranchosojos.ui.view.Activity.CadastroPedidosActivity;
+import com.example.ranchosojos.ui.view.Activity.pedidos.AddPedidosActivity;
+import com.example.ranchosojos.ui.view.Activity.pedidos.CadastroHamburgerActivity;
 import com.example.ranchosojos.ui.view.helper.ConfiguracaoFirebase;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fabCriarPedido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, CadastroPedidosActivity.class);
+                Intent i = new Intent(MainActivity.this, AddPedidosActivity.class);
                 startActivity(i);
             }
         });

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.Activity.CadastroPedidosActivity">
+    tools:context=".ui.view.Activity.pedidos.CadastroHamburgerActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,30 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:text="@string/mesa"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.022"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <Spinner
-                android:id="@+id/spinnerMesas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:contentDescription="@string/mesa"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -65,9 +42,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginTop="40dp"
                 android:text="0"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarRancho"
@@ -76,8 +51,8 @@
 
             <Button
                 android:id="@+id/buttonAdicionarRancho"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
                 android:contentDescription="@string/action_sign_in"
                 android:includeFontPadding="false"
@@ -85,33 +60,34 @@
                 app:icon="@drawable/ic_adicionar_preto_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.412"
                 app:layout_constraintStart_toEndOf="@+id/textView4"
                 app:layout_constraintTop_toTopOf="@+id/textView4"
+                android:background="@drawable/fundo"
                 app:layout_marginBaseline="0dp" />
 
             <Button
                 android:id="@+id/buttonDiminuirRancho"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
-
                 android:contentDescription="@string/action_sign_in"
                 app:backgroundTint="#00673AB7"
                 app:icon="@drawable/ic_baseline_remove_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView4"
                 app:layout_constraintEnd_toStartOf="@+id/textView4"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="@+id/textView4"
                 app:layout_constraintVertical_bias="0.523"
+                android:background="@drawable/fundo"
                 app:layout_marginBaseline="0dp" />
 
             <TextView
@@ -138,7 +114,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="32dp"
                 android:text="@string/burger_rancho"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -160,9 +136,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
                 android:text="0"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarJose"
@@ -171,35 +145,36 @@
 
             <Button
                 android:id="@+id/buttonAdicionarJose"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
                 android:contentDescription="@string/action_sign_in"
                 android:includeFontPadding="false"
                 app:backgroundTint="#00673AB7"
                 app:icon="@drawable/ic_adicionar_preto_24"
-                app:iconGravity="textEnd"
+                app:iconGravity="textTop"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.412"
                 app:layout_constraintStart_toEndOf="@+id/textView8"
                 app:layout_constraintTop_toTopOf="@+id/textView8"
+                android:background="@drawable/fundo"
                 app:layout_marginBaseline="0dp" />
 
             <Button
                 android:id="@+id/buttonDiminuirJose"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
                 android:contentDescription="@string/action_sign_in"
                 app:backgroundTint="#00673AB7"
                 app:icon="@drawable/ic_baseline_remove_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView8"
                 app:layout_constraintEnd_toStartOf="@+id/textView8"
@@ -207,15 +182,14 @@
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="@+id/textView8"
                 app:layout_constraintVertical_bias="0.523"
+                android:background="@drawable/fundo"
                 app:layout_marginBaseline="0dp" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
                 android:text="0"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarSantana"
@@ -224,8 +198,8 @@
 
             <Button
                 android:id="@+id/buttonAdicionarSantana"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
                 android:contentDescription="@string/action_sign_in"
                 android:includeFontPadding="false"
@@ -233,32 +207,34 @@
                 app:icon="@drawable/ic_adicionar_preto_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.412"
                 app:layout_constraintStart_toEndOf="@+id/textView10"
                 app:layout_constraintTop_toTopOf="@+id/textView10"
+                android:background="@drawable/fundo"
                 app:layout_marginBaseline="0dp" />
 
             <Button
                 android:id="@+id/buttonDiminuirSantana"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
                 android:contentDescription="@string/action_sign_in"
                 app:backgroundTint="#00673AB7"
                 app:icon="@drawable/ic_baseline_remove_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView10"
                 app:layout_constraintEnd_toStartOf="@+id/textView10"
                 app:layout_constraintHorizontal_bias="0.326"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="@+id/textView10"
+                android:background="@drawable/fundo"
                 app:layout_marginBaseline="0dp" />
 
             <TextView
@@ -276,9 +252,7 @@
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
                 android:text="0"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarMirim"
@@ -287,8 +261,8 @@
 
             <Button
                 android:id="@+id/buttonAdicionarMirim"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
                 android:contentDescription="@string/action_sign_in"
                 android:includeFontPadding="false"
@@ -296,32 +270,34 @@
                 app:icon="@drawable/ic_adicionar_preto_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView12"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.412"
                 app:layout_constraintStart_toEndOf="@+id/textView12"
                 app:layout_constraintTop_toTopOf="@+id/textView12"
+                android:background="@drawable/fundo"
                 app:layout_marginBaseline="0dp" />
 
             <Button
                 android:id="@+id/buttonDiminuirMirim"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
                 android:contentDescription="@string/action_sign_in"
                 app:backgroundTint="#00673AB7"
                 app:icon="@drawable/ic_baseline_remove_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView12"
                 app:layout_constraintEnd_toStartOf="@+id/textView12"
                 app:layout_constraintHorizontal_bias="0.326"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="@+id/textView12"
+                android:background="@drawable/fundo"
                 app:layout_marginBaseline="0dp" />
 
             <TextView
@@ -339,9 +315,7 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
                 android:text="0"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarJardim"
@@ -350,8 +324,8 @@
 
             <Button
                 android:id="@+id/buttonAdicionarJardim"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
                 android:contentDescription="@string/action_sign_in"
                 android:includeFontPadding="false"
@@ -359,27 +333,29 @@
                 app:icon="@drawable/ic_adicionar_preto_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView14"
+                android:background="@drawable/fundo"
                 app:layout_constraintTop_toTopOf="@+id/textView14"/>
 
             <Button
                 android:id="@+id/buttonDiminuirJardim"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:contentDescription="@string/action_sign_in"
                 app:backgroundTint="#00673AB7"
                 app:icon="@drawable/ic_baseline_remove_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView14"
                 app:layout_constraintEnd_toStartOf="@+id/textView14"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
+                android:background="@drawable/fundo"
                 app:layout_constraintTop_toTopOf="@+id/textView14"/>
 
             <TextView
@@ -397,48 +373,49 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
                 android:text="0"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/button"
                 app:layout_constraintEnd_toStartOf="@+id/buttonAdicionarJardim"
                 app:layout_constraintStart_toEndOf="@+id/buttonDiminuirJardim"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/buttonAdicionarFaustino"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="0dp"
+                android:background="@drawable/fundo"
                 android:contentDescription="@string/action_sign_in"
                 android:includeFontPadding="false"
                 app:backgroundTint="#00673AB7"
                 app:icon="@drawable/ic_adicionar_preto_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView16"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toEndOf="@+id/textView16"
                 app:layout_constraintTop_toTopOf="@+id/textView16" />
 
             <Button
                 android:id="@+id/buttonDiminuirFaustino"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/fundo"
                 android:contentDescription="@string/action_sign_in"
                 app:backgroundTint="#00673AB7"
                 app:icon="@drawable/ic_baseline_remove_24"
                 app:iconGravity="textEnd"
                 app:iconPadding="0dp"
-                app:iconSize="28dp"
+                app:iconSize="20dp"
                 app:iconTint="#000000"
                 app:layout_constraintBottom_toBottomOf="@+id/textView16"
                 app:layout_constraintEnd_toStartOf="@+id/textView16"
-                app:layout_constraintHorizontal_bias="0.35"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="@+id/textView16" />
 
@@ -459,27 +436,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.22" />
+                app:layout_constraintGuide_percent="0.0" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline4"
+            <Button
+                android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.64" />
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/petiscos"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                android:text="@string/salvar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/guideline4" />
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
